@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Run Buddy</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+
+<!-- Header Division/Section-->    
+    <header>
+        <h1> RUN BUDDY</h1>
+        
+        <!-- Navigation of Different Tabs-->
+        <nav>
+            <ul> <!-- Unordered List of Elements-->
+                <li> <!-- List item elements-->
+                    <a href="#what-we-do">What We Do</a> <!-- <a></a> ;Anchors-->
+                </li>
+                <li>
+                    <a href="#what-you-do">What You Do</a>
+                </li>
+                <li>
+                    <a href="#your-trainers">Your Trainers</a>            
+                </li>
+                <li>
+                    <a href="#reach-out">Reach Out</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+        
+            
+        </section>
+        <!-- New Section for the Fill Out Form after the Header-->
+        <section class="hero">
+            <!-- New Division of Content in the section-->
+            <div class="hero-form"> <!--Hero-from class is being used to create the box around the labels listed below-->
+                <h3>Get Started Today</h3>
+                <p>Fill out this form and one of our trainers will schedule a consult</p>
+                
+                <!-- To Insert an input form-->
+                <form>
+                    <label for="name">Enter Full Name:</label> <!--Label is used to have visual and linking user Input as noted below-->
+                    <input type="text" placeholder="Your Name" name="name" id="name" class="form-input" /> <!--User Input for Name-->                     
+                    
+                    <label for="email">Enter E-mail:</label> <!-- Email Label-->
+                    <input type="email" placeholder="Email Address" name="email" id="email" class="form-input" /> <!--User Input for Email-->
+                    
+                    <label for="phone"> Enter Phone Number:</label> <!--Phone Label-->
+                    <input type="tel" placeholder="Phone Number" name="phone" id="phone" class="form-input"/> <!--User Input for Phone-->
+
+                    <!-- Will be creating a Radio Button; which is a single selection button/checkbox-->
+                    <!-- Allows a signe selection to be made and is typically a small circle -->
+
+                    <p>
+                        Have you worked out with a trainer before?
+                        <input type="radio" name="trainer-confirm" id="trainer-yes" /> <!-- Asks user for input from the Radio Button-->
+                        <label for="trainer-yes"> Yes</label> <!-- Creates a "YES" Label-->
+                        <input type="radio" name="trainer-confirm" id="trainer-no" /> <!-- Asks user for the input from the Radio Button-->
+                        <label for="trainer-no"> No</label> <!-- Creates a "NO" Label-->
+                    </p>
+                    
+                    <!-- Checkbox Input; shown as a square box that is ticket when activated-->
+                    <!-- It is a single check box, usually to make a user agree-->
+                    <p>
+                        <label for="checkbox">
+                        I acknowledge that I am at least 18 years of acknowledge
+                        </label>
+                        <input type="checkbox" name="acknowledge" id="checkbox"/>
+                    </p>
+
+                    <!-- Created "Submit Button" which would usually send the data to another server-->
+                    
+                    <button type="submit">
+                        Get Running!
+                    </button>
+
+                </form>    
+            </div>
+        </section>
+        
+     <!-- What we do Section ; NEW SECTION-->   
+        <section id="what-we-do"class="intro"> <!--Linking the top tool bar to the section using the ID-->
+        <h2 class="section-title primrary-border">What We Do</h2>
+        <p>
+            Butcher selfies chambray shabby chic gentrify readymade yr Echo Park XOXO Tumblr normcore Banksy direct trade Blue Bottle chillwave you probably haven't heard of them single-origin coffee Vice fanny pack fixie Odd Future Austin fingerstache pickled twee synth Wes Anderson Thundercats viral bitters flannel meggings narwhal Marfa Schlitz sustainable Intelligentsia umami deep v craft
+        </p>
+        </section>
+    
+      <!-- "what you do" section -->
+         <section id="what-you-do" class ="steps"> <!--Linking the top tool bar to the section using the ID. The class=intro will help us design the section in css-->
+            <h2 class="section-title secondary-border">What You Do</h2>
+
+            
+            <div>
+                <!--SVG files are used instead of jpeg because SVG is Scalable Vector Graphics that will not pixelate-->
+                <img src="step-1.svg" alt=""/> <!-- alt atribute explains the content and context of the images to search engines and assistive technology such as screen readers. "" means its empty so the screen reader will ignore it-->
+                <h3>Step 1: <span> Fill out the Form Above.</span></h3> <!--Span doesn;t change anything visually, it is an inline element meant for highlighting sections of the larger text blocks-->
+                <p>You're already here, so why not?</p>
+            </div>
+            <div>
+                <img src="step-2.svg" alt=""/>
+                <h3>Step 2: <span>Consult with One of Our Trainers.</span></h3>
+                <p>Are you here to build muscle, lose weight or just feel good?</p>
+            </div>
+            <div>
+                <img src="step-3.svg" alt=""/>
+                <h3> Step 3: <span>Get Running!</span></h3>
+                <p>Hit the ground (literally) one your trainer lays out your plan.</p>
+            </div>
+            <div>
+                <img src="step-4.svg" alt=""/>
+                <h3>Step 4: <span>See Results.</span></h3>
+                <p>Bi-weekly checkin with your trainer will help you focused</p>
+            </div>
+        </section>
+    
+      <!-- "meet the trainers" section -->
+        <section id="your-trainers" class="trainers"> <!--Linking the top tool bar to the section using the ID-->
+            <!-- First Trainer Bio-->
+            <article class="trainer"> <!-- Articles is just like sections; where all the elements that are within the Articles are related to one another but not with anything that is outside the element.-->
+                <h2 class="section-title primrary-border">Meet The Trainers</h2>
+                <img src ="trainer-1.jpg" alt = "Arron Stephens in his workout clothes, ready to pump iron" />
+                    <div class="trainer-bio text-left">
+                        
+                        <h3> Arron Stephens</h3>
+                        <h4>Speed/Strength</h4>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi neque animi quo cupiditate commodi saepe culpa sed
+                            itaque velit maiores optio dolorem excepturi aperiam dolores, voluptatibus suscipit amet quis repellat!
+                        </p>      
+                    </div>
+            </article>
+            <!-- Second Trainer Bio-->
+            
+            <article class="trainer">
+                <div class="trainer-bio text-right">
+                    <h3>Joanna Gill</h3>
+                    <h4>Endurance</h4>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi neque animi quo cupiditate commodi saepe culpa sed
+                        itaque velit maiores optio dolorem excepturi aperiam dolores, voluptatibus suscipit amet quis repellat!
+                    </p>
+                </div>
+                <img src="trainer-2.jpg" atl="Joanna Gill cooling off after  workout"/>    
+            </article>
+            <!-- Third Trainer Bio-->
+
+            <article class="trainer">
+                <img src="trainer-3.jpg" atl="Harry Smith wearing a headband and lifting comically small pink weights" />
+                <div class="trainer-bio text-left">
+                    <h3>Harry "The Husband" Smith</h3>
+                    <h4>Strength</h4>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi neque animi quo cupiditate commodi saepe culpa sed
+                        itaque velit maiores optio dolorem excepturi aperiam dolores, voluptatibus suscipit amet quis repellat!
+
+                    </p>
+                </div>
+            </article>
+
+        </section>
+    
+      <!-- "Reach out" section -->
+        <section id="reach-out" class="contact"> <!--Linking the top tool bar to the section using the ID-->
+        <h2 class="section-title secondary-border">Reach Out</h2>
+            <div class="contact-info">
+                <!--iframe is inline frame which nests browsing content and embeds and html page into current page-->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11538.744801304558!2d-79.7534965095558!3d43.696286781769345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b15f41ac2142b%3A0xb60c10627c1aa319!2s80%20Eastern%20Ave%2C%20Brampton%2C%20ON%20L6W%201X9!5e0!3m2!1sen!2sca!4v1618513234871!5m2!1sen!2sca" 
+                        width="400" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>           
+                <div>
+                    <h3>Run Buddy</h3>
+                    <p>
+                        Any questions or concerns before signing up?
+                        <br/>
+                        Let us know and we'll be happy to talk to you!
+                    </p>
+                    <address> <!-- The address element defines the contact info for the author or owner of the document-->
+                        80 Eastern Avenue <br/>
+                        Brampton, ON <br/>
+                        P: 905.RUN.BUDZ (905.786.2839) <br/>
+                        E: <a href="mailto:info@runbuddy.io">info@runbuddy.io</a>
+                    </address>
+                </div>
+            </div>
+        </section>
+
+        <!-- For the privacy policy-->
+        
+    
+      <!-- footer -->
+        <footer>
+            <div>
+                <a href="./privacy-policy.html"> Read our Privacy Policy</a><br />
+                &copy; 2019 Run Buddy, Inc.
+            </div>
+        <h2>❤️ Made with love by Run Buddy.</h2>
+        </footer>  
+
+  </body>
+</html>
