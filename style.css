@@ -16,14 +16,19 @@ header{
     /* Padding means adding spacing around the content*/
     padding: 20px 35px; /*20 px TOP/BOTTOm and 35px LEFT/RIGHT */
     background-color: #39a6b2;
+    display: flex; /* the display flex option made the child elements in the header (parent) by deafult in a row */
+    justify-content: space-between; /* this property puts all of the un-used space in the header between the two elements */
+    flex-wrap: wrap; /* this instructs the parent element to let child elements to break onto next line when the don't fit on one line */
+
 }
+
 
 header h1{
     font-weight: bold;
     font-size: 36px;
     color: #fce138;
     margin: 0;
-    display: inline;
+   
 
 }
 
@@ -33,7 +38,7 @@ header a{
 }
 
 header nav{
-    float: right;
+    
     margin: 7px 0; 
 }
 
