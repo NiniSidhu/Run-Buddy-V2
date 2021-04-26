@@ -170,9 +170,7 @@ section{
 
 }
 
-.intro{
-    text-align: center; /*for the entire section under class intro */
-}
+
 
 /*.intro h2{ /*for the h2 in the intro class only
     font-size: 55px;
@@ -191,10 +189,12 @@ section{
     width: 80%; /* paragraph width shrunk down to 80 % */
     font-size: 20px;
     margin: 0 auto; /*auto means it tells the browser to calculate the margins for us */
+    text-align: center;
+
 }
 
 .steps{ /*for the entire section under class steps */
-    text-align: center;
+    
     background:#fce138;
 }
 
@@ -212,9 +212,7 @@ because it combines their declarations as the code below */
 .section-title{ 
     font-size: 55px;
     color:#024e76;
-    margin-bottom: 35px;
-    padding: 0 100px 20px 100px;
-    display: inline-block;
+    
     border-bottom: 3px solid;
 }
 .primrary-border{
@@ -249,7 +247,7 @@ because it combines their declarations as the code below */
 }
 
 .trainers{ /*for the trainers section*/
-    text-align: center;
+    
 
 }
 
@@ -303,10 +301,14 @@ because it combines their declarations as the code below */
     border-bottom: 35px;
     margin-bottom: 35px;
     color: #024e76;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto; /* top 0px bottom 35px and left & right are set to AUTO */
+    width: 50%;
 }
 
 .contact{
-    text-align: center;
+    
     background: #024e76
 }
 
@@ -356,4 +358,8 @@ because it combines their declarations as the code below */
     font-size: 42px;
     font-style: italic;
 
+}
+
+.flex-row{
+    display: flex;
 }
