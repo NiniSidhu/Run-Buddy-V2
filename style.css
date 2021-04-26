@@ -54,7 +54,7 @@ header nav ul{
 
 
 header nav ul li a{
-    margin: 0 30px; 
+   padding: 10px 15px; 
     font-weight: lighter;
     font-size: 1.55vw; /* vw = view width measurement which tells browser that the font size should be roughlt 1.55% of the window's overall width. */
 }
@@ -98,6 +98,7 @@ section{
     display: flex;
     justify-content: center; /* set to center because we want to place the two child boxes as close to the middle of the screen as possible */
     flex-wrap: wrap;
+    align-items: flex-start;
 
 
 }
@@ -108,7 +109,7 @@ section{
     margin: 3.5%;
     color: #fff;
     font-size: 18px;
-    line-height: 1.3;
+    line-height: 1.2;
 }
 
 .hero-cta h2{
@@ -210,7 +211,7 @@ section{
 /*this is being used intead of .steps h2 or .intro h2 
 because it combines their declarations as the code below */
 .section-title{ 
-    font-size: 55px;
+    font-size: 48px;
     color:#024e76;
     
     border-bottom: 3px solid;
@@ -419,3 +420,111 @@ because it combines their declarations as the code below */
     display: flex;
 }
 
+/* Media Query for smaller Desktop Screens and Smaller */
+@media  screen and (max-width: 980px) {
+   header {
+       padding-bottom: 0;
+       justify-content: center;
+   }
+
+   header h1{
+       width: 100%;
+       text-align: center;
+   }
+    
+   header nav ul{
+       margin-top: 20px;
+       width: 100%;
+       justify-content: center;
+   }
+
+   header nav ul li a{
+       font-size: 20px;
+   }
+
+   footer h2, footer div{
+       text-align: center;
+       width: 100%;
+   }
+
+   .hero-cta, .hero-form{
+       width: 100%;
+   }
+
+   .hero-cta{
+       text-align: center;
+   }
+
+   .section-title{
+       width: 80%;;
+   }
+
+   .trainer{
+       flex: 0 70%;
+   }
+
+   .contact-info iframe{
+       flex: 1 100%;
+   }
+}
+
+/* Media Query for Tablets and Smaller */
+
+@media screen and (max-width: 786px){
+    section{
+        padding: 30 px 15px;
+    }
+
+    .step h3{
+        flex: 1 100%;
+    }
+
+    .step-info{
+        flex: 2 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .step-img{
+        flex: 0 32%;
+        margin-right: 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .step-text{
+        flex:100%;
+    }
+}
+
+/* Media Query for Mobile phones and Smaller */
+
+@media screen and (max-width: 575px){
+    .hero-form button{
+        width: 100%;
+    }
+
+    .section-title{
+        width: 95%;
+    }
+
+    .intro p{
+        width: 100%;
+    }
+
+    .trainer{
+        flex: 0 100%;
+    }
+
+    .contact-info{
+        text-align: center;
+    }
+
+    .contact-info > *{
+        flex: 0 100%;
+    }
+
+    .contact-form{
+        order: 3; /* order helps rearrange how child elements appear on a page without moving the HTML */
+    }
+}
