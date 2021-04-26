@@ -14,3 +14,5 @@ https://lerantino.github.io/run-buddy
 ## Contribution 
 
 Made with ❤️ by Nayandeep Sidhu :) 
+
+## ©️2019 Run Buddy, Inc 
