@@ -19,7 +19,14 @@ header{
     display: flex; /* the display flex option made the child elements in the header (parent) by deafult in a row */
     justify-content: space-between; /* this property horizontally puts all of the un-used space in the header between the two elements */
     flex-wrap: wrap; /* this instructs the parent element to let child elements to break onto next line when the don't fit on one line */
-
+    position: -webkit-sticky;
+    position: sticky; /* This allows the header to stay at the same place no matter where you are on the page */
+    top: 0; 
+    background-image: url("hero-bg.jpg"); /*background image */
+    background-position: center;
+    background-size: cover; /*changes the size of the background; cover keeps the image contained and not clipped */
+    background-attachment: fixed;
+    background-position: 80%;
 }
 
 
@@ -28,6 +35,7 @@ header h1{
     font-size: 36px;
     color: #fce138;
     margin: 0;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
    
 
 }
@@ -53,10 +61,18 @@ header nav ul{
 
 
 
-header nav ul li a{
-   padding: 10px 15px; 
+header nav ul li a{ /* This is the non-hovering counterpart */
+    padding: 10px 15px; 
     font-weight: lighter;
     font-size: 1.55vw; /* vw = view width measurement which tells browser that the font size should be roughlt 1.55% of the window's overall width. */
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+header nav ul li a:hover{ /* This is hovering counterprt */
+    background:#fce138;
+    color:#024e76;
+    border-radius: 15px;
+    text-shadow: none;
 }
 
 footer{
@@ -90,15 +106,28 @@ section{
     padding: 60px; /*adding padding to the section side of html */
     
 }
+
+.some-class{
+    /* Can use negative (-) values in shaddows to create a more beautiful look */
+    /* 0px 0 px 10px rgba(0,0,0,0.5) : The first 0 means horizontal offset so shadow will start at the left side of the text
+    second 0 indicate no vertical offset
+    third value of 10 px indicates radius or size of the blur 
+    rgba (0,0,0,0.5) sets the color to black and sets the opacity to 0.5 */
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.5); /* Used to add shadow to text */
+    box-shadow: 5px 10px 15px rgba(0,0,0,0.25); /*Used to add shadow to containers like div */
+}
+
 .hero{
     background-image: url("hero-bg.jpg"); /*background image */
-    
+    background-position: center;
     background-size: cover; /*changes the size of the background; cover keeps the image contained and not clipped */
     
     display: flex;
     justify-content: center; /* set to center because we want to place the two child boxes as close to the middle of the screen as possible */
     flex-wrap: wrap;
     align-items: flex-start;
+    background-attachment: fixed;
+    background-position: 80%;
 
 
 }
@@ -116,11 +145,12 @@ section{
     font-style: italic;
     font-size: 55px;
     color:#fce138;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-.hero-form{
+.hero-form{ /*This is the non-hovering counterpart */
     border: 3px solid #024e76;
-    background-color: #fce138; /*sets background color of the selected element; the hero form in our case */
+    background-color: rgba(252, 225, 56, 0.8); /*sets background color of the selected element; the hero form in our case */
     padding: 20px; /*padding is creating the inner margin within the border refer to CSS BOX for visual */
     
     color: #024e76; /*color of the text within that box */
@@ -139,8 +169,13 @@ section{
 
     width: 40%;
     margin: 3.5%;
-    
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 15px;
 
+}
+
+.hero-form button:hover{ /*This is the hovering counterpart */
+    background-color: #39a6b2;
 }
 
 .hero-form p{
@@ -156,6 +191,13 @@ section{
     color: #024e76;
     width: 100%;
     margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: rgba(225, 225, 225, 0.75); /*changes the color of the background input field */
+}
+
+.form-input:focus{ /*Using the focus field, we can visually highlight the form input field that the user is currently typing in. */
+    background-color: rgba(225,225,225,1);
+    outline: none; 
 }
 
 .hero-form label{
@@ -168,6 +210,7 @@ section{
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    border-radius: 10px;
 
 }
 
@@ -234,6 +277,14 @@ because it combines their declarations as the code below */
     justify-content: space-between;
 }
 
+.step:nth-child(even) {
+    border-bottom: 1px solid #39a6b2;
+}
+
+.step:not(:last-child){
+    border-bottom: 1px solid #39a6b2;
+}
+
 .step h3{
     color:#024e76;
     font-size:46px;
@@ -271,6 +322,8 @@ because it combines their declarations as the code below */
     line-height: 1.5;
     color: #024e76;
 }
+
+
 
 .trainers{
     width: 100%;
@@ -386,9 +439,18 @@ because it combines their declarations as the code below */
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
+    border-radius: 10px;
+    background-color: rgba(225, 225, 225, 0.75); /*changes the color of the background input field */
+
 }
 
-.contact-form button{
+
+.contact-form input:focus, .contact-form textarea:focus{ /*Using the focus field, we can visually highlight the form input field that the user is currently typing in. */
+    background-color: rgba(225,225,225,1);
+    outline: none; 
+}
+
+.contact-form button{ /*This is the non-hovering counterpart */
     width: 100%;
     border: none; 
     background: #fce138;
@@ -396,6 +458,12 @@ because it combines their declarations as the code below */
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
+    border-radius: 10px;
+}
+
+.contact-form button:hover{ /*This is hovering counterpart */
+    color: #fce138;
+    background: #39a6b2
 }
 
 .contact-info a{
@@ -420,11 +488,36 @@ because it combines their declarations as the code below */
     display: flex;
 }
 
+/***** The following is used for Button Hovering and the way the button reacts */
+
+/* default state of the button */
+
+button{
+    background: white;
+}
+
+/* When mouse is hovering over button */
+
+button:hover{
+    background: red; 
+}
+
+/* Button is in focus becayse it was the most recently clicked element on the page */
+button:focus{
+    background: green; 
+}
+
+/* User is actively pressing the curson down on the button */
+button:active{ 
+    background: blue; 
+}
+
 /* Media Query for smaller Desktop Screens and Smaller */
 @media  screen and (max-width: 980px) {
    header {
        padding-bottom: 0;
        justify-content: center;
+       position: relative;
    }
 
    header h1{
@@ -466,6 +559,7 @@ because it combines their declarations as the code below */
    .contact-info iframe{
        flex: 1 100%;
    }
+
 }
 
 /* Media Query for Tablets and Smaller */
