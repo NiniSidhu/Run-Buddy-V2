@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Run Buddy</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
     <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
@@ -63,19 +63,23 @@
 
                     <p>
                         Have you worked out with a trainer before?
-                        <input type="radio" name="trainer-confirm" id="trainer-yes" /> <!-- Asks user for input from the Radio Button-->
-                        <label for="trainer-yes"> Yes</label> <!-- Creates a "YES" Label-->
-                        <input type="radio" name="trainer-confirm" id="trainer-no" /> <!-- Asks user for the input from the Radio Button-->
-                        <label for="trainer-no"> No</label> <!-- Creates a "NO" Label-->
+                        <span class="radio-wrapper">
+                            <input type="radio" name="trainer-confirm" id="trainer-yes" /> <!-- Asks user for input from the Radio Button-->
+                            <label for="trainer-yes"> Yes</label> <!-- Creates a "YES" Label-->
+                        </span>
+                        <span class="radio-wrapper">
+                            <input type="radio" name="trainer-confirm" id="trainer-no" /> <!-- Asks user for the input from the Radio Button-->
+                            <label for="trainer-no"> No</label> <!-- Creates a "NO" Label-->
+                        </span>
                     </p>
                     
                     <!-- Checkbox Input; shown as a square box that is ticket when activated-->
                     <!-- It is a single check box, usually to make a user agree-->
                     <p>
-                        <label for="checkbox">
-                        I acknowledge that I am at least 18 years of acknowledge
-                        </label>
-                        <input type="checkbox" name="acknowledge" id="checkbox"/>
+                        <span class="checkbox-wrapper">
+                            <input type="checkbox" name="age-confirm" id="checkbox"/>
+                            <label for="checkbox">I acknowledge that I am at least 18 years of acknowledge</label>
+                        </span>
                     </p>
 
                     <!-- Created "Submit Button" which would usually send the data to another server-->
